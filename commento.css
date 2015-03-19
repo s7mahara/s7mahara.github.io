@@ -1,0 +1,83 @@
+/* Transition CSS below the comments */
+
+.cd-panel {
+	/*...*/
+	visibility: hidden;
+	transition: visibility 0s 0.6s;
+}
+ 
+.cd-panel.is-visible {
+	visibility: visible;
+	transition: visibility 0s 0s;
+}
+ 
+.cd-panel-header {
+	/*...*/
+	position: fixed;
+	top: -50px;
+	width: 90%;
+	height: 50px;
+	transition: top 0.3s 0s;
+}
+ 
+.is-visible .cd-panel-header {
+	top: 0;
+	transition: top 0.3s 0.3s;
+}
+ 
+.cd-panel-container {
+	background: #e2e2e2;
+	box-shadow: -3px 0 12px -3px rgba(25, 25, 35, 0.06), 1px 0 0 #e2e2e2 inset;
+	min-width: 220px;
+	overflow: visible !important;
+	padding: 0;
+	position: fixed;
+	top: 0;
+	width: 500px;
+	height: auto;
+	z-index: 10;
+	/*...*/
+	position: fixed;
+	width: 90%;
+	height: 100%;
+	top: 0;
+	right: 0;
+	 
+	transition-property: transform;
+	transition-duration: 0.3s;
+	transition-delay: 0.3s;
+	 
+	transform: translate3d(100%, 0, 0);
+}
+ 
+.is-visible .cd-panel-container {
+	transform: translate3d(0, 0, 0);
+	transition-delay: 0s;
+}
+
+/* Expand button */
+
+.expand-comments {
+	cursor: pointer;
+	position: relative;
+	top: 220px;
+	left: -36px;
+	width: 88px;
+	-moz-transform: rotate(-90deg);
+	-webkit-transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+	transform: rotate(-90deg);
+	background-color: #08c;
+	border-radius: 0 4px 4px 0;
+	border-style: solid solid solid none;
+	box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.25) inset, 0 1px 2px rgba(0, 0, 0, 0.5);
+	border-width: 1px 1px 1px medium;
+	border-color: #fff #fff #fff -moz-use-text-color;
+}
+
+.expand-comments-label {
+	color: white;
+	font-weight: bold;
+	padding: 7px;
+}
+
